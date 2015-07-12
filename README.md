@@ -1,4 +1,5 @@
 # rekognition
+----
 
 ReKognition sample
 
@@ -14,7 +15,18 @@ $ source ./venv/bin/activate
 (venv)$ pip install -r requirements.txt
 ```
 
-## Run
+## Setting API KEY
+
+ Check your key from https://rekognition.com/index.php/user/account
+
+```python:rekognition.py
+# rekognition_key = os.environ.get("REKOGNITION_KEY")
+rekognition_key = "YOUT_API_KEY_HERE"
+# rekognition_secret = os.environ.get("REKOGNITION_SECRET")
+rekognition_secret = "YOUT_API_SECRET_HERE"
+```
+
+## Usage
 
 ```bash
 % python rekognition.py who.jpg              (git)-[master]
