@@ -1,5 +1,4 @@
 # rekognition
-----
 
 ReKognition sample
 
@@ -29,7 +28,7 @@ rekognition_secret = "YOUT_API_SECRET_HERE"
 ## Usage
 
 ```bash
-% python rekognition.py who.jpg              (git)-[master]
+% python rekognition.py who.jpg
 {
     "url": "base64",
     "face_detection": [
