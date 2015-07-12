@@ -25,6 +25,15 @@ rekognition_key = "YOUT_API_KEY_HERE"
 rekognition_secret = "YOUT_API_SECRET_HERE"
 ```
 
+Or if you use [autoenv](https://github.com/kennethreitz/autoenv),
+
+```bash
+$ cp .env.sample .env
+$ vi .env  # update your api key
+$ cd ..
+$ cd rekognition  # apply api key as a environment variable
+```
+
 ## Usage
 
 ```bash
