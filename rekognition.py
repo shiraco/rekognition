@@ -1,35 +1,38 @@
 # coding:utf-8
 
-import os
 import sys
+import os
 import requests
 import json
 import base64
 from base64 import b64encode
+
+from __future__ import print_function
 
 rekognition_key = os.environ.get("REKOGNITION_KEY")
 rekognition_secret = os.environ.get("REKOGNITION_SECRET")
 
 def recognize(filename):
 
-    # API-Keys
     url = "http://rekognition.com/func/api/"
+    jobs = "face_gender_age"
+    timeout = 30
 
     response = requests.post(
         url,
         data = {
             'api_key': rekognition_key,
             'api_secret': rekognition_secret,
-            'jobs': 'face_recognize',
+            'jobs': jobs,
             'name_space': 'multify',
             'user_id': 'demo',
             'base64': b64encode(open(filename, 'rb').read()),
-        }
+        },
+        timeout = timeout
     )
 
-    res = json.loads(response.text)
-
-    return res
+    result = json.dumps(response.json(), indent = 4)
+    return result
 
 if __name__ == '__main__':
     print(recognize(sys.argv[1]))
