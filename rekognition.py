@@ -1,13 +1,13 @@
 # coding:utf-8
 
+from __future__ import print_function
+
 import sys
 import os
 import requests
 import json
 import base64
 from base64 import b64encode
-
-from __future__ import print_function
 
 rekognition_key = os.environ.get("REKOGNITION_KEY")
 rekognition_secret = os.environ.get("REKOGNITION_SECRET")
